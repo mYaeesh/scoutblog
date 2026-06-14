@@ -5,9 +5,11 @@ baseurl: ""
 url: https://scoutblog.yaeesh.dev
 author: Yaeesh
 
-# jekyllBear theme via remote_theme
 remote_theme: knhash/jekyllBear
+
+Blog: /blog
 
 plugins:
   - jekyll-feed
   - jekyll-remote-theme
+  - jekyll-redirect-from
