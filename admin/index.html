@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Admin — Scout Blog</title>
+  <link rel="icon" href="/assets/favicon.ico" />
+  <style>
+    :root {
+      --bg:         #0c0c0b;
+      --surface:    #141311;
+      --border:     #252220;
+      --amber:      #c8913c;
+      --amber-hi:   #daa84e;
+      --amber-lo:   #a3722a;
+      --text:       #ede9e3;
+      --text-sub:   #8a7e74;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body {
+      height: 100%;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Grain texture — matches main site */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23g)' opacity='1'/%3E%3C/svg%3E");
+      opacity: 0.05;
+    }
+
+    /* Pre-loader shown while Decap CMS JS downloads */
+    #preloader {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1.25rem;
+      background: var(--bg);
+      transition: opacity 0.4s ease;
+    }
+
+    .pl-wordmark {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .pl-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--amber);
+    }
+
+    .pl-title {
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      color: var(--text);
+    }
+
+    .pl-sub {
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-sub);
+    }
+
+    .pl-bar {
+      width: 100px;
+      height: 1.5px;
+      background: var(--border);
+      border-radius: 2px;
+      overflow: hidden;
+    }
+
+    .pl-bar-fill {
+      height: 100%;
+      width: 0;
+      background: linear-gradient(90deg, var(--amber-lo), var(--amber), var(--amber-hi));
+      border-radius: 2px;
+      animation: bar-load 1.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    }
+
+    @keyframes bar-load {
+      0%   { width: 0%; }
+      25%  { width: 35%; }
+      60%  { width: 68%; }
+      100% { width: 100%; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .pl-bar-fill { animation: none; width: 100%; }
+      #preloader { transition: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="preloader">
+    <div class="pl-wordmark">
+      <div class="pl-dot"></div>
+      <span class="pl-title">Scout Blog</span>
+    </div>
+    <div class="pl-bar"><div class="pl-bar-fill"></div></div>
+    <span class="pl-sub">Loading editor…</span>
+  </div>
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/decap-cms@3.14.1/dist/decap-cms.js"
+    integrity="sha384-K+E/B3QG3FJrtRXoyUjME4ilx71pYGyrvAVxYvd/p0zCPuXsc3eoEuSzUW3Ke63V"
+    crossorigin="anonymous"></script>
+
+  <script>
+    window.addEventListener('load', () => {
+      const loader = document.getElementById('preloader');
+      if (!loader) return;
+      loader.style.opacity = '0';
+      setTimeout(() => loader.remove(), 420);
+    });
+  </script>
+
+</body>
+</html>
