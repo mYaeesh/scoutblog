@@ -3,8 +3,11 @@ layout: default
 title: Home
 ---
 
-## Welcome to Scout Blog
+## Hey, I'm Yaeesh
 
-A place for scouting adventures, updates, and stories.
+Member (and SPL) of 25th Malé Scout Group aka Aminiya Scouts
 
-**Stay curious. Be prepared.**
+This is my personal scouting blog where I document my scouting journey, badge work,
+adventures, and whatever else happens along the way.
+
+If you're here, welcome to my blog!
