@@ -39,4 +39,11 @@ collections:
         widget: list
         allow_add: true
         default: []
+      - label: Cover Image
+        name: image
+        widget: image
+        required: false
+        media_library:
+          config:
+            multiple: false
       - { label: Body, name: body, widget: markdown }
