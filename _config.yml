@@ -9,6 +9,10 @@ remote_theme: knhash/jekyllBear
 
 Blog: /blog
 
+links:
+  - [Tags, /tags]
+  - [About, /about]
+
 plugins:
   - jekyll-feed
   - jekyll-remote-theme

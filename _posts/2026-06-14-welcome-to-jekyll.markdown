@@ -1,29 +1,23 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
-date:   2026-06-14 16:15:25 +0500
-categories: jekyll update
+title: "First Post — Welcome to Scout Blog"
+date: 2026-06-14 16:15:25 +0500
+tags: [scouting, aminiya-scouts]
 ---
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
-Jekyll requires blog post files to be named according to the following format:
+Hey, welcome to my blog!
 
-`YEAR-MONTH-DAY-title.MARKUP`
+I'm Yaeesh — Senior Patrol Leader (SPL) of the **25th Malé Scout Group**, also known as Aminiya Scouts. I started this blog to document my scouting journey: badge work, camping trips, patrol activities, and anything else worth writing about.
 
-Where `YEAR` is a four-digit number, `MONTH` and `DAY` are both two-digit numbers, and `MARKUP` is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+### Why a blog?
 
-Jekyll also offers powerful support for code snippets:
+Scouting involves a lot of experiences that are easy to forget over time. Writing them down forces me to actually reflect on what I've done, what went well, and what I'd do differently. Plus it's a good excuse to practice writing.
 
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
+### What to expect
 
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
+- Updates on badge progress and what I'm working on
+- Trip reports from camps and outdoor activities
+- Notes on patrol and group events
+- Occasional thoughts on leadership and scouting in general
 
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
+If you're a fellow scout or just curious — welcome. More posts coming soon.
